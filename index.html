@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enciclopedia de Animales</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="img/Logo.png">
+    <script>history.scrollRestoration = "manual"</script>
+    <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header / Menú -->
+    <div>
+        <header id="header">
+            <div class="top-bar">
+                <div class="logo-text">
+                    <h1>WildScript</h1>
+                    <p><b>Naturaleza Salvaje</b></p>
+                </div>
+
+                <!-- Solo añadir esta parte del botón hamburguesa -->
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav>
+                    <ul>
+                        <li><a href="#header" class="active">INICIO</a></li> <!-- Cambiar de #inicio a #header -->
+                        <li><a href="#slider">ANIMALES</a></li>
+                        <li><a href="#estadisticas">ESTADÍSTICAS FASCINANTES</a></li>
+                        <li><a href="#sobre-mi">SOBRE MÍ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="home-page" class="page-active" data-category="home">
+            <section id="slider">
+                <div class="slider-container">
+                    <!-- Slide 1: Animales Terrestres -->
+                    <div class="slide active"> <!-- QUITAR id="terrestres-page" -->
+                        <img src="img/AnimalesTerrestres.jpg" alt="Animales Terrestres">
+                        <div class="slide-text">
+                            <h2>ANIMALES TERRESTRES</h2>
+                            <p>Descubre la increíble diversidad de vida<br>que habita en nuestros continentes</p>
+                            <button class="explore-btn" data-category="terrestres">EXPLORAR🔍</button>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Animales Acuaticos -->
+                    <div class="slide">
+                        <img src="img/AnimalesMarinos.jpg" alt="Animales Acuaticos">
+                        <div class="slide-text">
+                            <h2>ANIMALES ACUATICOS</h2>
+                            <p>Sumérgete en los océanos y conoce<br>las criaturas más fascinantes del mar</p>
+                            <button class="explore-btn" data-category="acuaticos">EXPLORAR🔍</button>
+
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Animales Aéreos -->
+                    <div class="slide">
+                        <img src="img/AnimalesAereos.jpg" alt="Animales Aéreos">
+                        <div class="slide-text">
+                            <h2>ANIMALES AÉREOS</h2>
+                            <p>Vuela alto y explora el reino<br>de las aves y criaturas voladoras</p>
+                            <button class="explore-btn" data-category="aereos">EXPLORAR🔍</button>
+                        </div>
+                    </div>
+
+                    <!-- Flechas -->
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </section>
+
+            <!-- Sección Estadísticas Fascinantes -->
+            <section id="estadisticas" class="stats-section">
+                <div class="container">
+                    <div class="stats-header">
+                        <h2>ESTADÍSTICAS FASCINANTES</h2>
+                        <p>Descubre los récords más increíbles del reino animal</p>
+                    </div>
+
+                    <div class="stats-grid">
+                        <!-- Fila 1: Velocidad, Lentitud, Tamaño -->
+                        <div class="stat-card speed">
+                            <div class="stat-image">
+                                <img src="img/HalconPeregrino.png" alt="El más rápido">
+                            </div>
+                            <div class="stat-content">
+                                <h3>🏃‍♂️ LOS MÁS RÁPIDOS</h3>
+                                <p>La velocidad es una ventaja evolutiva crucial para la caza y la supervivencia.
+                                    Algunos
+                                    animales han desarrollado capacidades de movimiento que desafían nuestros límites de
+                                    percepción.</p>
+                                <button class="read-more-btn" data-stat="velocidad">LEER MÁS</button>
+                            </div>
+                        </div>
+
+                        <div class="stat-card slow">
+                            <div class="stat-image">
+                                <img src="img/babosabanana.jpg" alt="El más lento">
+                            </div>
+                            <div class="stat-content">
+                                <h3>🐌 LOS MÁS LENTOS</h3>
+                                <p>La lentitud no es una desventaja, sino una estrategia de supervivencia. Moverse
+                                    despacio
+                                    puede ser la clave para ahorrar energía y pasar desapercibido.</p>
+                                <button class="read-more-btn" data-stat="lentitud">LEER MÁS</button>
+                            </div>
+                        </div>
+
+                        <div class="stat-card size">
+                            <div class="stat-image">
+                                <img src="img/ballenaazul.png" alt="El más grande">
+                            </div>
+                            <div class="stat-content">
+                                <h3>📏 LOS MÁS GRANDES</h3>
+                                <p>El tamaño masivo ofrece ventajas únicas: mayor capacidad de almacenamiento de
+                                    energía,
+                                    intimidación natural y dominio territorial absoluto en sus ecosistemas.</p>
+                                <button class="read-more-btn" data-stat="tamaño">LEER MÁS</button>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: Tamaño Pequeño, Sonido, Fuerza -->
+                        <div class="stat-card tiny">
+                            <div class="stat-image">
+                                <img src="img/RanaPaedophryneamauensis.png" alt="El más pequeño">
+                            </div>
+                            <div class="stat-content">
+                                <h3>🐭 LOS MÁS PEQUEÑOS</h3>
+                                <p>Ser diminuto permite acceder a nichos únicos, consumir menos recursos y desarrollar
+                                    metabolismos extraordinariamente eficientes que desafían las leyes físicas.</p>
+                                <button class="read-more-btn" data-stat="pequeño">LEER MÁS</button>
+                            </div>
+                        </div>
+
+                        <div class="stat-card sound">
+                            <div class="stat-image">
+                                <img src="img/cachalote.png" alt="El más ruidoso">
+                            </div>
+                            <div class="stat-content">
+                                <h3>🔊 LOS MÁS RUIDOSOS</h3>
+                                <p>El sonido es comunicación, territorio y supervivencia. Algunos animales han
+                                    desarrollado
+                                    capacidades acústicas que superan cualquier tecnología humana.</p>
+                                <button class="read-more-btn" data-stat="sonido">LEER MÁS</button>
+                            </div>
+                        </div>
+
+                        <div class="stat-card strength">
+                            <div class="stat-image">
+                                <img src="img/escarabajopelotero.png" alt="El más fuerte">
+                            </div>
+                            <div class="stat-content">
+                                <h3>💪 LOS MÁS FUERTES</h3>
+                                <p>La fuerza relativa al tamaño corporal revela adaptaciones musculares increíbles que
+                                    permiten
+                                    hazañas que parecen imposibles según las leyes de la física.</p>
+                                <button class="read-more-btn" data-stat="fuerza">LEER MÁS</button>
+                            </div>
+                        </div>
+
+                        <!-- Fila 3: Mordida, Inteligencia, Longevidad -->
+                        <div class="stat-card bite">
+                            <div class="stat-image">
+                                <img src="img/cocodrilodeaguasalada.png" alt="Mordida más fuerte">
+                            </div>
+                            <div class="stat-content">
+                                <h3>🦷 MORDIDA MÁS FUERTE</h3>
+                                <p>La fuerza de mordida representa millones de años de evolución, creando herramientas
+                                    biológicas capaces de ejercer presiones devastadoras.</p>
+                                <button class="read-more-btn" data-stat="mordida">LEER MÁS</button>
+                            </div>
+                        </div>
+
+                        <div class="stat-card intelligence">
+                            <div class="stat-image">
+                                <img src="img/chimpance.png" alt="El más inteligente">
+                            </div>
+                            <div class="stat-content">
+                                <h3>🧠 LOS MÁS INTELIGENTES</h3>
+                                <p>La inteligencia animal abarca desde el reconocimiento propio hasta el uso de
+                                    herramientas,
+                                    demostrando capacidades cognitivas que rivalizan con las humanas.</p>
+                                <button class="read-more-btn" data-stat="inteligencia">LEER MÁS</button>
+                            </div>
+                        </div>
+
+                        <div class="stat-card longevity">
+                            <div class="stat-image">
+                                <img src="img/tiburondegroenlandia.jpeg" alt="El más longevo">
+                            </div>
+                            <div class="stat-content">
+                                <h3>⏰ LOS MÁS LONGEVOS</h3>
+                                <p>La longevidad extrema revela secretos evolutivos sobre regeneración, resistencia y
+                                    adaptación
+                                    que podrían revolucionar nuestra comprensión del envejecimiento.</p>
+                                <button class="read-more-btn" data-stat="longevidad">LEER MÁS</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="img/Logo.png" alt="WildScript Logo" class="logo-img">
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Explora</h4>
+                    <ul>
+                        <li><a href="#slider">Animales Terrestres</a></li>
+                        <li><a href="#slider">Animales Acuaticos</a></li>
+                        <li><a href="#slider">Animales Aéreos</a></li>
+                        <li><a href="#favoritos">Mis Favoritos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="#sobre-mi">Sobre Mí</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#privacidad">Privacidad</a></li>
+                        <li><a href="#terminos">Términos</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 WildScript - Naturaleza Salvaje. Todos los derechos reservados.</p>
+                <p>Diseñado con 🦁 para los amantes de la vida salvaje</p>
+            </div>
+        </div>
+    </footer>
+    <script src="Enciclopedia.js"></script>
+</body>
