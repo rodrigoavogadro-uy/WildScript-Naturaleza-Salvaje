@@ -1284,3 +1284,313 @@ body:has(.category-page) header {
 .category-page {
     padding-top: 100px !important;
 }
+
+
+/* Páginas de estadísticas */
+.stats-page {
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+}
+
+.stats-page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.stats-page-header h1 {
+    font-family: 'Mystery Quest', cursive;
+    font-size: 3.5rem;
+    color: #FFD700;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+}
+
+.speed-champions {
+    display: grid;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.champion-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.champion-card.gold {
+    border: 3px solid #FFD700;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+}
+
+.champion-card.silver {
+    border: 3px solid #C0C0C0;
+    box-shadow: 0 0 30px rgba(192, 192, 192, 0.3);
+}
+
+.champion-card.bronze {
+    border: 3px solid #CD7F32;
+    box-shadow: 0 0 30px rgba(205, 127, 50, 0.3);
+}
+
+.champion-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.champion-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.champion-info {
+    flex-grow: 1;
+    color: white;
+}
+
+.medal {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.champion-info h3 {
+    font-family: 'Mystery Quest', cursive;
+    font-size: 2rem;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.speed-stat {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FF4500;
+    margin: 15px 0;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.speed-facts {
+    margin-top: 50px;
+}
+
+.speed-facts h2 {
+    font-family: 'Mystery Quest', cursive;
+    font-size: 2.5rem;
+    color: #FFD700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.facts-comparison {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.comparison-item {
+    background: rgba(255, 69, 0, 0.1);
+    border: 2px solid rgba(255, 69, 0, 0.3);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+}
+
+.comparison-item h4 {
+    color: #FF4500;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.comparison-item p {
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .champion-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .stats-page-header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Sección Sobre Mí */
+.about-section {
+    background: linear-gradient(135deg, #2d4a22 0%, #1a2f1a 50%, #0f1a0f 100%);
+    color: white;
+    padding: 80px 0;
+    position: relative;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-header h2 {
+    font-family: 'Mystery Quest', cursive;
+    font-size: 3.5rem;
+    color: #FFD700;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.8);
+}
+
+.about-header p {
+    font-size: 1.3rem;
+    color: #ccc;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.about-text h3 {
+    color: #32CD32;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.about-text h3:first-child {
+    margin-top: 0;
+}
+
+.about-text p {
+    color: #e0e0e0;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.about-text ul {
+    color: #e0e0e0;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.about-text li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-content: start;
+}
+
+.project-stat {
+    background: rgba(50, 205, 50, 0.1);
+    border: 2px solid rgba(50, 205, 50, 0.3);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project-stat:hover {
+    transform: translateY(-5px);
+    border-color: #32CD32;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #32CD32;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.contact-info {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-info h3 {
+    color: #32CD32;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-btn {
+    background: linear-gradient(45deg, #32CD32, #98FB98);
+    color: #1a2f1a;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(50, 205, 50, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-header h2 {
+        font-size: 2.5rem;
+    }
+    
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Efectos hover para elementos clickeables */
+.logo-text:hover {
+    transform: scale(0.95);
+    opacity: 0.8;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+/* Cursor pointer */
+.logo-text,
+.logo-img {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
